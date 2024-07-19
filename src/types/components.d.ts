@@ -7,7 +7,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ChevronDown: typeof import('./../components/ChevronDown.vue')['default']
+    ChevronLeft: typeof import('./../components/ChevronLeft.vue')['default']
+    ChevronRight: typeof import('./../components/ChevronRight.vue')['default']
+    ChevronUp: typeof import('./../components/ChevronUp.vue')['default']
+    Close: typeof import('./../components/Close.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
+    Loading: typeof import('./../components/Loading.vue')['default']
     ViChevronLeft: typeof import('~icons/vi/chevron-left')['default']
     ViChevronRight: typeof import('~icons/vi/chevron-right')['default']
   }

@@ -1,14 +1,14 @@
 {
-  "name": "vite-vue-starter",
+  "name": "drow-icons",
   "author": {
     "name": "fourdusk"
   },
   "license": "Apache-2.0",
-  "description": "A quick vite vue starter",
+  "description": "A light icon library",
   "keywords": [
-    "vite",
-    "vue",
-    "starter"
+    "drow",
+    "ligth",
+    "icon"
   ],
   "version": "0.0.1",
   "type": "module",
@@ -17,6 +17,9 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
+    "write-svg": "tsx src/helpers/write-svg.ts",
+    "write-vue": "tsx src/helpers/write-vue.ts",
+    "write-all": "pnpm write-svg && pnpm write-vue",
     "eslint": "eslint --fix src/**/*.{vue,js,jsx,ts,tsx}",
     "prettier": "prettier --write **/*.{vue,js,jsx,ts,tsx,json,md,css,scss,html}",
     "stylelint": "stylelint --fix src/**/*.{vue,css,scss,html}",
@@ -30,6 +33,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.0.3",
+    "@iconify/tools": "^4.0.4",
     "@types/node": "^20.14.11",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
@@ -37,6 +41,7 @@
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "autoprefixer": "^10.4.19",
+    "consola": "^3.2.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^2.1.0",
@@ -53,6 +58,7 @@
     "stylelint": "^16.7.0",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
+    "tsx": "^4.16.2",
     "typescript": "^5.2.2",
     "unocss": "^0.61.5",
     "unplugin-icons": "^0.19.0",

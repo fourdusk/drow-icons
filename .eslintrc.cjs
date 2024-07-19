@@ -31,6 +31,7 @@ const config = defineConfig({
     // eslint
     yoda: 'off',
     complexity: ['error', 10],
+    'consistent-return': 'off',
     'one-var': 'off',
     'sort-keys': 'off',
     'sort-vars': 'off',

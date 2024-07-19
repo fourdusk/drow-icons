@@ -1,0 +1,6 @@
+export { default as ChevronDown } from '../components/chevron-down.vue'
+export { default as ChevronLeft } from '../components/chevron-left.vue'
+export { default as ChevronRight } from '../components/chevron-right.vue'
+export { default as ChevronUp } from '../components/chevron-up.vue'
+export { default as Close } from '../components/close.vue'
+export { default as Loading } from '../components/loading.vue'

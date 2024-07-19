@@ -14,7 +14,5 @@ declare module 'vue' {
     Close: typeof import('./../components/Close.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     Loading: typeof import('./../components/Loading.vue')['default']
-    ViChevronLeft: typeof import('~icons/vi/chevron-left')['default']
-    ViChevronRight: typeof import('~icons/vi/chevron-right')['default']
   }
 }

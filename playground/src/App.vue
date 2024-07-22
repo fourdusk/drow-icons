@@ -6,19 +6,19 @@
       </div>
       <div>{{ pascalToKebab(comp.name) }}</div>
     </div>
+    <div class="box-item">
+      <div>
+        <DiSun />
+      </div>
+      <div>sun</div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Component } from 'vue'
+import * as compList from '@drow-icons/svg'
 
-import { pascalToKebab } from '@/helpers'
-const modules = import.meta.glob('./components/*.vue', { eager: true, import: 'default' })
-const compList: Component[] = []
-
-for (const [, mod] of Object.entries(modules)) {
-  compList.push(mod as Component)
-}
+import { pascalToKebab } from './helpers'
 </script>
 
 <style lang="scss" scoped>
@@ -39,4 +39,3 @@ for (const [, mod] of Object.entries(modules)) {
   }
 }
 </style>
-@/helpers

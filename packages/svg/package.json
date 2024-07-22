@@ -1,0 +1,45 @@
+{
+  "name": "@drow-icons/svg",
+  "author": {
+    "name": "fourdusk"
+  },
+  "license": "MIT",
+  "description": "A light icon library",
+  "keywords": [
+    "drow",
+    "ligth",
+    "icon"
+  ],
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/main.cjs",
+  "module": "./dist/main.js",
+  "types": "./dist/src/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/src/main.d.ts",
+        "default": "./dist/main.cjs"
+      },
+      "import": {
+        "types": "./dist/src/main.d.ts",
+        "default": "./dist/main.js"
+      }
+    }
+  },
+  "scripts": {
+    "write-svg": "tsx src/helpers/write-svg.ts",
+    "write-vue": "tsx src/helpers/write-vue.ts",
+    "write-all": "pnpm write-svg && pnpm write-vue",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@iconify/tools": "^4.0.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.31"
+  }
+}

@@ -9,9 +9,7 @@ import icons from 'unplugin-icons/vite'
 import components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
-const pathResolve = (dir: string) => {
-  return resolve(process.cwd(), '.', dir)
-}
+const pathResolve = (dir: string) => resolve(process.cwd(), '.', dir)
 
 const config = defineConfig({
   resolve: {
@@ -30,7 +28,7 @@ const config = defineConfig({
       defaultClass: '',
       defaultStyle: '',
       customCollections: {
-        vi: iconLoader(pathResolve('src/icons'))
+        di: iconLoader(pathResolve('src/svg'))
       }
     }),
     components({
@@ -39,7 +37,7 @@ const config = defineConfig({
       resolvers: [
         iconsResolver({
           prefix: false,
-          customCollections: ['vi']
+          customCollections: ['di']
         })
       ]
     })

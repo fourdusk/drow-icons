@@ -1,8 +1,9 @@
 {
-  "name": "drow-icons",
+  "name": "drow-icons-mono",
   "author": {
     "name": "fourdusk"
   },
+  "private": true,
   "license": "Apache-2.0",
   "description": "A light icon library",
   "keywords": [
@@ -22,9 +23,6 @@
     "playground": "pnpm run -C playground dev",
     "build": "pnpm -r --parallel --filter=./packages/* run build"
   },
-  "dependencies": {
-    "@drow-icons/svg": "workspace:^"
-  },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
@@ -33,7 +31,6 @@
     "@types/node": "^20.14.11",
     "@typescript-eslint/eslint-plugin": "^7.16.1",
     "@typescript-eslint/parser": "^7.16.1",
-    "@unocss/eslint-config": "^0.61.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "autoprefixer": "^10.4.19",
@@ -56,7 +53,6 @@
     "stylelint-config-standard-scss": "^13.1.0",
     "tsx": "^4.16.2",
     "typescript": "^5.2.2",
-    "unocss": "^0.61.5",
     "vite": "^5.3.4",
     "vite-plugin-dts": "4.0.0-beta.1",
     "vue": "^3.4.31",

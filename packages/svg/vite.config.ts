@@ -5,6 +5,8 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
+import { removeFiles } from './src/helpers/index'
+
 const pathResolve = (dir: string) => resolve(process.cwd(), '.', dir)
 
 const config = defineConfig({
@@ -21,6 +23,9 @@ const config = defineConfig({
           filePath,
           content: replaceContent
         }
+      },
+      afterBuild() {
+        removeFiles('dist/src')
       }
     })
   ],

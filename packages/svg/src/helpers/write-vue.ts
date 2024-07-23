@@ -1,47 +1,13 @@
-import {
-  accessSync,
-  constants,
-  mkdirSync,
-  readdirSync,
-  rmdirSync,
-  statSync,
-  unlinkSync,
-  writeFileSync
-} from 'node:fs'
+import { mkdirSync, writeFileSync } from 'node:fs'
 
 import { getOptimizeIconSet } from './icon'
-import { kebabToPascal } from './index'
+import { kebabToPascal, removeFiles } from './index'
 const iconSet = await getOptimizeIconSet()
 
 const saveDir = 'src/components'
 let exportStr = ''
 
-const fileIsExist = (path: string) => {
-  try {
-    accessSync(path, constants.F_OK)
-  } catch {
-    return false
-  }
-  return true
-}
-
-const removeDirAndFile = (dir: string) => {
-  if (fileIsExist(dir)) {
-    const files = readdirSync(dir)
-    for (const file of files) {
-      const path = `${dir}/${file}`
-      const isFile = statSync(path).isFile()
-      if (isFile) {
-        unlinkSync(path)
-      } else {
-        removeDirAndFile(path)
-      }
-    }
-    rmdirSync(dir)
-  }
-}
-
-removeDirAndFile(saveDir)
+removeFiles(saveDir)
 mkdirSync(saveDir)
 
 iconSet.forEach(name => {

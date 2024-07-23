@@ -16,7 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import * as compList from '../../packages/svg/src/main'
+import * as compList from 'drow-icons'
+
 import { pascalToKebab } from './helpers'
 </script>
 

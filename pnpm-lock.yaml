@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@drow-icons/svg':
+      drow-icons:
         specifier: workspace:^
         version: link:packages/svg
     devDependencies:
@@ -1953,7 +1953,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.4.33
       '@vue/shared': 3.4.33
-      vue: 3.4.33
+      vue: 3.4.33(typescript@5.5.3)
 
   /@vue/shared@3.4.33:
     resolution: {integrity: sha512-aoRY0jQk3A/cuvdkodTrM4NMfxco8n55eG4H7ML/CRy7OryHfiqvug4xrCBBMbbN+dvXAetDDwZW9DXWWjBntA==}
@@ -4717,7 +4717,7 @@ packages:
       minimatch: 9.0.5
       mlly: 1.7.1
       unplugin: 1.11.0
-      vue: 3.4.33
+      vue: 3.4.33(typescript@5.5.3)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -4871,20 +4871,6 @@ packages:
       semver: 7.6.3
       typescript: 5.5.3
     dev: true
-
-  /vue@3.4.33:
-    resolution: {integrity: sha512-VdMCWQOummbhctl4QFMcW6eNtXHsFyDlX60O/tsSQuCcuDOnJ1qPOhhVla65Niece7xq/P2zyZReIO5mP+LGTQ==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@vue/compiler-dom': 3.4.33
-      '@vue/compiler-sfc': 3.4.33
-      '@vue/runtime-dom': 3.4.33
-      '@vue/server-renderer': 3.4.33(vue@3.4.33)
-      '@vue/shared': 3.4.33
 
   /vue@3.4.33(typescript@5.5.3):
     resolution: {integrity: sha512-VdMCWQOummbhctl4QFMcW6eNtXHsFyDlX60O/tsSQuCcuDOnJ1qPOhhVla65Niece7xq/P2zyZReIO5mP+LGTQ==}
